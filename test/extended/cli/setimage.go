@@ -45,7 +45,6 @@ var _ = g.Describe("[sig-cli] oc set image", func() {
 		})
 		o.Expect(err).NotTo(o.HaveOccurred())
 
-
 		g.By("testing --local flag validation")
 		out, err := oc.Run("set").Args("image", "dc/test-deployment-config", "ruby-helloworld=ruby:3.3-ubi8", "--local").Output()
 		o.Expect(err).To(o.HaveOccurred())
